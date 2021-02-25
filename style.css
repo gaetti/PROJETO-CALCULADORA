@@ -1,0 +1,83 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #547a82
+}
+input{
+    margin: 2px;
+    border: none;
+    border-radius: 10px;
+}
+
+input[type=text]{
+    width:10rem;
+    height: 40px;
+}
+input[type=button]{
+    width: 50%;
+    height: 50px;
+    transition: ease 0.2s;
+    cursor: pointer;
+}
+
+/*deixar a calculadora com um sombreado*/
+
+div#calculadora{
+    box-shadow: 0 0 20px black;
+}
+
+div#calculadora div{
+    display: flex;
+    border-bottom-left-radius: 50px;
+}
+/*Classes Filhas*/
+div#quarta input:nth-child(1){
+    background: #f11a1a;
+
+}
+
+div#quarta input:nth-child(3){
+    background:#1a4cf1;
+}
+
+/*Resolvendo problema com o sombreado usando as tags child*/
+
+div#quarta input:nth-child(1), div#calculadora{
+    border-bottom-left-radius: 30px;
+}
+
+div#quarta input:nth-child(4), div#calculadora{
+    border-bottom-right-radius: 30px;
+}
+
+/*Estilizar somente os OPERADORES deixando escutos*/
+/*praticamente todos os ultimos inputs de todas as DIVS teram uma cor mais escura que os de mais!*/
+
+div#calculadora div input:nth-child(4){
+    filter: brightness(85%);
+    background: salmon;
+
+}
+/*passar o mouse e deixar mais escuros os botoes*/
+input[type=button]:hover{
+    filter: brightness(75%);
+}
+
+
+input[type=button]:active{
+    transform: scale(0.95);
+}
+
